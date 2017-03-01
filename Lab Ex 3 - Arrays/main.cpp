@@ -26,21 +26,21 @@ int main()
 	int a;
 	cout << "Enter the amount of numbers you want to display ";
 	cin >> a;
-    const int SIZE = 5;
-	int arr[SIZE];
+    //const int SIZE = 5;
+	int *arr = new int[a];
 
 	for (int i = 0; i < a; i++)
 	{
 		cout << "Enter a number? ";
 		cin >> arr[i];
 	}
-	for (int i = SIZE - 1; i > -1 ; i--)
+	for (int i = a - 1; i > -1 ; i--)
 	{
 		cout << arr[i] << endl;
 	}
-	std::sort(arr, arr + 5);
+	std::sort(arr, arr + a);
 	cout <<"This is the lowest number " << arr[0] << endl;
-	std::sort(arr, arr + 5, std::greater<int>());
+	std::sort(arr, arr + a, std::greater<int>());
 	cout << "This is the highest number " << arr[0];
 	_getch();
 	return 0;

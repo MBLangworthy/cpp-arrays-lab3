@@ -20,14 +20,21 @@ using namespace std;
 
 int main()
 {
-	const int SIZE = 5;
+	int number;
+	
+    const int SIZE = 5;
 	int arr[SIZE];
 
 	for (int i = 0; i < SIZE; i++)
 	{
-
+		cout << "Enter your first number? ";
+		cin >> arr[i];
 	}
-
+	for (int i = SIZE; i > 0 ; i--)
+	{
+		cout << arr[i] << endl;
+	}
+	
 
 	_getch();
 	return 0;
